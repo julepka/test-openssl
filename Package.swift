@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "clopenssl",
             targets: ["clopenssl"]),
+        .library(
+            name: "clopensslobjc",
+            targets: ["clopensslobjc"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -20,7 +23,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "clopenssl",
-            dependencies: ["openssl"]),
+            dependencies: ["openssl"],
+            path: "Sources/clopenssl"),
+        .target(
+            name: "clopensslobjc",
+            dependencies: ["openssl"],
+            path: "Sources/clopenssl-objc"),
         .binaryTarget(name: "openssl",
                       url: "https://github.com/julepka/openssl-apple/releases/download/v.1.1.1080201/openssl-dynamic-xcframework.zip",
                       // swift package compute-checksum some.xcframework.zip from package directory
