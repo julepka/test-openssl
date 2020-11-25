@@ -1,3 +1,3 @@
-struct cl-openssl {
+struct clopenssl {
     var text = "Hello, World!"
 }

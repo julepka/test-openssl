@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "clopenssl",
-            targets: ["cl-openssl"]),
+            targets: ["clopenssl"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -19,7 +19,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "cl-openssl",
+            name: "clopenssl",
             dependencies: ["openssl"]),
         .binaryTarget(name: "openssl",
                       url: "https://github.com/julepka/openssl-apple/releases/download/v.1.1.1080201/openssl-dynamic-xcframework.zip",
