@@ -1,0 +1,5 @@
+
+/// Expose OpenSSL for extraneous Swift usage
+module clopenssl {
+    header "shim.h"
+}
